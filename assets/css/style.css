@@ -1,0 +1,113 @@
+/* Leaders Worth Following — design system
+   Palette from the LWF mark: deep navy, bright blue → teal gradient. Warm, human, energetic. */
+:root {
+  --navy: #16233c;
+  --navy-soft: #1f3252;
+  --ink: #22293a;
+  --ink-soft: #5a6275;
+  --bg: #ffffff;
+  --bg-alt: #f4f7fb;
+  --line: #e2e8f1;
+  --blue: #2f6bff;
+  --teal: #23c99d;
+  --grad: linear-gradient(100deg, #2f6bff, #23c99d);
+  --head: "Poppins", "Segoe UI", sans-serif;
+  --sans: "Nunito Sans", -apple-system, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--sans); font-size: 1.0625rem; line-height: 1.75; color: var(--ink); background: var(--bg); }
+img { max-width: 100%; height: auto; }
+
+h1, h2, h3, h4 { font-family: var(--head); font-weight: 700; line-height: 1.2; margin: 0 0 .5em; }
+h1 { font-size: clamp(2rem, 5vw, 3rem); }
+h2 { font-size: clamp(1.5rem, 3.4vw, 2.1rem); }
+h3 { font-size: 1.2rem; }
+p { margin: 0 0 1.2em; }
+a { color: var(--blue); }
+
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 1.25rem; }
+.grad-text { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+/* Header */
+.site-header { background: var(--navy); position: sticky; top: 0; z-index: 20; }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: .65rem; padding-bottom: .65rem; }
+.brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
+.brand img { height: 40px; width: auto; }
+.site-nav { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+.site-nav a { text-decoration: none; color: #c6d2e4; font-size: .9rem; font-weight: 600; letter-spacing: .04em; }
+.site-nav a:hover { color: #fff; }
+.site-nav a.donate { background: var(--grad); color: #fff; padding: .35rem 1.1rem; border-radius: 999px; }
+@media (max-width: 860px) { .site-header .wrap { flex-direction: column; } .site-nav { justify-content: center; } }
+
+/* Hero */
+.hero { position: relative; color: #fff; text-align: center; padding: 6.5rem 1.25rem; background: var(--navy); overflow: hidden; }
+.hero .bg { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: .35; }
+.hero .inner { position: relative; max-width: 46em; margin: 0 auto; }
+.hero h1 { color: #fff; }
+.hero p.lead { font-size: 1.3rem; color: #dbe4f2; }
+.btn { display: inline-block; background: var(--grad); color: #fff; text-decoration: none; padding: .8rem 2.1rem; border-radius: 999px; font-family: var(--head); font-weight: 600; letter-spacing: .03em; }
+.btn:hover { filter: brightness(1.08); }
+.btn.outline { background: transparent; border: 2px solid var(--teal); color: var(--teal); }
+.btn.outline:hover { background: var(--teal); color: #fff; filter: none; }
+
+/* Sections */
+section { padding: 4rem 0; }
+.section-head { text-align: center; margin-bottom: 2.2rem; }
+.section-head .rule { width: 68px; height: 4px; background: var(--grad); border: 0; border-radius: 2px; margin: 1rem auto 0; }
+.alt { background: var(--bg-alt); }
+
+.cols-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+@media (max-width: 780px) { .cols-2 { grid-template-columns: 1fr; } }
+.rounded { border-radius: 14px; box-shadow: 0 14px 34px rgba(22, 35, 60, .16); }
+
+/* Cards */
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.4rem; }
+.card { background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 1.7rem 1.5rem; }
+.card h3 { margin-bottom: .4em; }
+.card p { color: var(--ink-soft); margin-bottom: .6em; }
+
+/* Coaches */
+.coach { display: grid; grid-template-columns: 300px 1fr; gap: 2.5rem; align-items: start; margin-bottom: 3.5rem; }
+.coach img { border-radius: 14px; box-shadow: 0 14px 34px rgba(22, 35, 60, .16); }
+.coach h2 { margin-bottom: .3em; }
+@media (max-width: 720px) { .coach { grid-template-columns: 1fr; } .coach img { max-width: 320px; } }
+
+/* Link list (resources) */
+.link-list { list-style: none; padding: 0; display: grid; gap: 1.1rem; }
+.link-list li { background: var(--bg); border: 1px solid var(--line); border-left: 5px solid; border-image: var(--grad) 1; border-radius: 10px; padding: 1.2rem 1.5rem; }
+.link-list h3 { margin-bottom: .3em; }
+.link-list p { margin: 0; color: var(--ink-soft); }
+
+/* Embeds */
+.embed-center { display: flex; justify-content: center; padding: 1rem 0 2rem; }
+.embed-center iframe { border: 0; width: 100%; max-width: 601px; min-height: 615px; }
+
+/* Blog */
+.post-card { display: block; background: var(--bg); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; text-decoration: none; color: var(--ink); max-width: 640px; margin: 0 auto; transition: transform .15s ease, box-shadow .15s ease; }
+.post-card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(22, 35, 60, .12); }
+.post-card img { width: 100%; aspect-ratio: 2 / 1; object-fit: cover; }
+.post-card .pad { padding: 1.4rem 1.6rem; }
+.post-card .date { color: var(--ink-soft); font-size: .9rem; }
+.article { max-width: 720px; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+.article .date { color: var(--ink-soft); }
+.article h1 { font-size: clamp(1.7rem, 4vw, 2.4rem); }
+.article ol, .article ul { margin: 0 0 1.2em; padding-left: 1.4em; }
+.article li { margin-bottom: .35em; }
+
+/* Page title */
+.page-title { text-align: center; padding: 3.5rem 1.25rem 0; }
+.page-title .rule { width: 68px; height: 4px; background: var(--grad); border: 0; border-radius: 2px; margin: 1rem auto 0; }
+.page-title .lede { color: var(--ink-soft); max-width: 40em; margin: 1rem auto 0; }
+
+/* CTA band */
+.cta-band { background: var(--navy); color: #fff; text-align: center; padding: 3.5rem 1.25rem; }
+.cta-band h2 { color: #fff; }
+.cta-band p { color: #c6d2e4; max-width: 38em; margin: 0 auto 1.6em; }
+
+/* Footer */
+.site-footer { background: var(--navy); color: #c6d2e4; text-align: center; padding: 2.5rem 1.25rem; font-size: .95rem; }
+.site-footer img { height: 34px; margin-bottom: 1rem; }
+.site-footer a { color: #fff; }
+.site-footer .small { font-size: .85rem; color: #8fa0ba; }
