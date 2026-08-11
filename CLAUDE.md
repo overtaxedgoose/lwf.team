@@ -15,8 +15,10 @@ Static site for Leaders Worth Following (501(c)3 nonprofit), hosted on GitHub Pa
 - Donations: Givebutter — /donate embeds https://givebutter.com/embed/c/lwf;
   /trips uses the Givebutter widget (acct WLHKoUOW9ZEzMINM, widget id j1Xdv5)
 - Several Google Forms already owned by the team are linked from /schools and /resources
-- Contact + newsletter are mailto links (trishcurrie@lwf.team); TODO comments in index.html and
-  contact.html mark where to embed Google Forms when created
+- Contact: embedded Google Form "Get a Coach" on /contact
+  (/d/e/1FAIpQLScEg5l8jsZ2nyHcnkPVvxTx6Yb9D_2xAIkAr9GwGTCXqerQ7Q); newsletter button on home
+  links to the "LWF Newsletter" form (/d/e/1FAIpQLSeVkGFbYw2uEzGu57V3dZ8wBdSlFuAIHmBQaAV0Bn9Tawet4A).
+  Both owned by patrick@jajehgroup.com with email notifications on
 - Coach referral emails: grace@/joel@thebreakthroughpeople.com, trishcurrie@lwf.team;
   schools pricing: keithcurrie@lwf.team; corporate: patrick@jajehgroup.com
 
