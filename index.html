@@ -53,8 +53,28 @@
   <section class="cta-band">
     <h2>Subscribe to our occasional newsletter</h2>
     <p>Encouragement and leadership insight, a few times a year. No noise.</p>
-    <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeVkGFbYw2uEzGu57V3dZ8wBdSlFuAIHmBQaAV0Bn9Tawet4A/viewform">Sign Up</a>
+    <form class="band-form" id="news-form" novalidate="">
+      <input type="email" name="email" placeholder="Email address" required aria-label="Email address">
+      <button class="btn" type="submit">Sign Up</button>
+    </form>
+    <p class="form-ok" id="news-ok" hidden>You&rsquo;re on the list.</p>
   </section>
+
+  <script>
+    (function () {
+      const form = document.getElementById('news-form'), ok = document.getElementById('news-ok');
+      if (localStorage.getItem('lwf-newsletter-done')) { form.hidden = true; ok.hidden = false; return; }
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.reportValidity()) return;
+        const b = new FormData();
+        b.append('emailAddress', form.email.value.trim());
+        fetch('https://docs.google.com/forms/d/e/1FAIpQLSeVkGFbYw2uEzGu57V3dZ8wBdSlFuAIHmBQaAV0Bn9Tawet4A/formResponse', { method: 'POST', mode: 'no-cors', body: b }).catch(() => {});
+        localStorage.setItem('lwf-newsletter-done', '1');
+        form.hidden = true; ok.hidden = false;
+      });
+    })();
+  </script>
 
   <footer class="site-footer">
     <img src="/assets/img/lwf-logo-white.png" alt="">

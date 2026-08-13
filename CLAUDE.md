@@ -15,10 +15,14 @@ Static site for Leaders Worth Following (501(c)3 nonprofit), hosted on GitHub Pa
 - Donations: Givebutter — /donate embeds https://givebutter.com/embed/c/lwf;
   /trips uses the Givebutter widget (acct WLHKoUOW9ZEzMINM, widget id j1Xdv5)
 - Several Google Forms already owned by the team are linked from /schools and /resources
-- Contact: embedded Google Form "Get a Coach" on /contact
-  (/d/e/1FAIpQLScEg5l8jsZ2nyHcnkPVvxTx6Yb9D_2xAIkAr9GwGTCXqerQ7Q); newsletter button on home
-  links to the "LWF Newsletter" form (/d/e/1FAIpQLSeVkGFbYw2uEzGu57V3dZ8wBdSlFuAIHmBQaAV0Bn9Tawet4A).
-  Both owned by patrick@jajehgroup.com with email notifications on
+- Contact + newsletter are NATIVE forms styled to the site that POST silently (fetch no-cors)
+  to private Google Forms — do not replace with iframes, they look bulky:
+  - "LWF Get a Coach" on /contact: /d/e/1FAIpQLScEg5l8jsZ2nyHcnkPVvxTx6Yb9D_2xAIkAr9GwGTCXqerQ7Q
+    fields: emailAddress, entry.1873403862 (Your Name), entry.1935784512 (Phone)
+  - "LWF Newsletter" on home: /d/e/1FAIpQLSeVkGFbYw2uEzGu57V3dZ8wBdSlFuAIHmBQaAV0Bn9Tawet4A
+    fields: emailAddress (localStorage lwf-newsletter-done prevents dupes)
+  Both owned by patrick@jajehgroup.com with email notifications on. If form questions ever
+  change, re-extract entry IDs from the viewform data-params attributes.
 - Coach referral emails: grace@/joel@thebreakthroughpeople.com, trishcurrie@lwf.team;
   schools pricing: keithcurrie@lwf.team; corporate: patrick@jajehgroup.com
 

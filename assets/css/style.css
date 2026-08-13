@@ -84,6 +84,43 @@ section { padding: 4rem 0; }
 .embed-center { display: flex; justify-content: center; padding: 1rem 0 2rem; }
 .embed-center iframe { border: 0; width: 100%; max-width: 601px; min-height: 615px; }
 
+/* Native forms (post silently to Google Forms) */
+.nform { display: grid; gap: 1rem; margin: 1.5rem 0; text-align: left; }
+.nform input {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: .9rem 1.1rem;
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: var(--ink);
+  outline: none;
+  transition: border-color .2s ease;
+}
+.nform input:focus { border-color: var(--blue); }
+.nform .btn { border: 0; cursor: pointer; justify-self: center; }
+.form-ok { font-family: var(--head); font-weight: 700; color: var(--teal); font-size: 1.15rem; }
+.form-ok[hidden] { display: none; }
+/* newsletter capture on the dark band */
+.band-form { display: flex; flex-wrap: wrap; gap: .9rem; justify-content: center; margin-top: .5rem; }
+.band-form input {
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid rgba(198, 210, 228, .35);
+  border-radius: 999px;
+  padding: .8rem 1.4rem;
+  min-width: 260px;
+  font-family: var(--sans);
+  font-size: 1rem;
+  color: #fff;
+  outline: none;
+  transition: border-color .2s ease;
+}
+.band-form input::placeholder { color: #9fb0ca; }
+.band-form input:focus { border-color: var(--teal); }
+.band-form .btn { border: 0; cursor: pointer; }
+.cta-band .form-ok { color: var(--teal); }
+
 /* Blog */
 .post-card { display: block; background: var(--bg); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; text-decoration: none; color: var(--ink); max-width: 640px; margin: 0 auto; transition: transform .15s ease, box-shadow .15s ease; }
 .post-card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(22, 35, 60, .12); }
