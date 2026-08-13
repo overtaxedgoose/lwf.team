@@ -27,6 +27,12 @@ Static site for Leaders Worth Following (501(c)3 nonprofit), hosted on GitHub Pa
   schools pricing: keithcurrie@lwf.team; corporate: patrick@jajehgroup.com
 
 ## Rules
+- NEVER publish an email address anywhere on this site — all contact routes to /contact
+  (the native form). This includes coach emails and thebreakthroughpeople.com addresses.
+- pk@lwf.team is in charge of LWF (not Trish — she is one of the coaches). Don't present
+  Trish as the org contact.
+- /trips is hidden (redirects home) because the South Asia 2026 trip is past — restore the
+  page from git history and re-add nav links/sitemap entry when a new trip is planned.
 - Every legacy URL path must keep working: /coaches /trips /schools /corporate /resources
   /contact /donate /blog /blog/f/<slug> /trishcurrie /trish-currie /family
 - /family and /trishcurrie are unlisted (not in nav) on purpose.

@@ -61,6 +61,7 @@ section { padding: 4rem 0; }
 .cols-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
 @media (max-width: 780px) { .cols-2 { grid-template-columns: 1fr; } }
 .rounded { border-radius: 14px; box-shadow: 0 14px 34px rgba(22, 35, 60, .16); }
+.rounded.fit { max-height: 420px; width: 100%; object-fit: cover; }
 
 /* Cards */
 .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.4rem; }
