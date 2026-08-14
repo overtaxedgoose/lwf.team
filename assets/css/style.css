@@ -103,6 +103,7 @@ section { padding: 4rem 0; }
 .nform .btn { border: 0; cursor: pointer; justify-self: center; }
 .form-ok { font-family: var(--head); font-weight: 700; color: var(--teal); font-size: 1.15rem; }
 .form-ok[hidden] { display: none; }
+.nform[hidden] { display: none; }
 /* newsletter capture on the dark band */
 .band-form { display: flex; flex-wrap: wrap; gap: .9rem; justify-content: center; margin-top: .5rem; }
 .band-form input {
